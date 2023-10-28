@@ -64,7 +64,7 @@ with DAG(
         db_user=REDSHIFT_DATABASE_USER,
         sql=REDSHIFT_QUERY,
         poll_interval=POLL_INTERVAL,
-        await_result=True,
+        wait_for_completion=True,
     )
 
     task_output = output_query_results(task_query.output)
